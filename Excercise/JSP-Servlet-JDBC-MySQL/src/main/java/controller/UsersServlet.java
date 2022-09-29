@@ -119,7 +119,7 @@ public class UsersServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
-        userDAO.insertUser(new User());
+        userDAO.insertUser(new User(name, email, country));
         RequestDispatcher dispatcher = request.getRequestDispatcher("user/create.jsp");
         dispatcher.forward(request, response);
     }
