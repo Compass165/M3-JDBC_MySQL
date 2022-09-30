@@ -11,10 +11,19 @@
 <html>
 <head>
     <title>User Management Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
 <center>
     <h1>User Management</h1>
+    <form action="/users" method="post" class="form-group search-form">
+        <input type="text" name="search" class="form-control search-input" placeholder="Type something">
+        <input type="hidden" name="action" value="search">
+        <button type="submit" class="btn btn-primary search-btn">Seacrh</button>
+        <a href="/users?action=create"
+           class="btn btn-primary search-btn">Add</a>
+        <a href="/users" class="btn btn-primary search-btn">Menu</a>
+    </form>
     <h2>
         <a href="/users?action=create">Add New User</a>
     </h2>
